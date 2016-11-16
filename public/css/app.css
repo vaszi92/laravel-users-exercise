@@ -44,3 +44,10 @@ tr:nth-child(even) {
     width:100%
 }
 
+div.alert{
+    max-width:60%;
+    margin:50px auto;
+    border-radius: 5px;
+    border:1px solid #a94442;
+}
+
