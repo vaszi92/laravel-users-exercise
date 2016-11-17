@@ -5,7 +5,7 @@
 
 <div class="form-group">
     {!! Form::label('password', 'Password: ') !!}
-    {!! Form::text('password', null, ['class'=>'form-control', 'data-validation'=>'length', 'data-validation-length'=>'6-50']) !!}
+    {!! Form::text('password', null, ['class'=>'form-control', 'data-validation'=>'length', 'data-validation-length'=>'6-200']) !!}
 </div>
 
 <!--<div class="form-group">
