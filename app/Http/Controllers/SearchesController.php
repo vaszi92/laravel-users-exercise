@@ -18,6 +18,9 @@ class SearchesController extends Controller {
                     ->orWhere("phone", "LIKE", "%$keyword%")->get();
 
             return view('pages.results', compact('users'));
+            
+//            if ($request->wantsJson()) {return $users;}
+//            return view("pages.users", compact('users'));
         }
 
 }

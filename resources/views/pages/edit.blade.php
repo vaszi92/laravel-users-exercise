@@ -8,7 +8,7 @@
     
     {!! Form::model($user, ['method'=>'PATCH', 'action'=>['UsersController@update', $user->id]]) !!}
     
-        @include('pages.form', ['submitButtonText'=>'Update Article'])
+        @include('pages.editform', ['submitButtonText'=>'Update Article'])
     
     {!! Form::close()!!}
 </div>
