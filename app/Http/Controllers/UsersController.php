@@ -39,7 +39,7 @@ class UsersController extends Controller {
 	public function store(Request $request)
 	{
 		$input = $request->all();
-//                $input['password'] = bcrypt($input['password']);
+                $input['password'] = bcrypt($input['password']);
                 
                 User::create($input);
                 
