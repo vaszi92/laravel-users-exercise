@@ -9,8 +9,8 @@
 </div>
 
 <!--<div class="form-group">
-    {!! Form::label('password2', 'Repeat Password: ') !!}
-    {!! Form::text('password2', null, ['class'=>'form-control']) !!}
+    //{!! Form::label('password2', 'Repeat Password: ') !!}
+    //{!! Form::text('password2', null, ['class'=>'form-control']) !!}
 </div>-->
 
 <div class="form-group">
