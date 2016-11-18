@@ -11,16 +11,19 @@ class SearchesController extends Controller {
             
             $keyword = $request->get('keyword');
 
-            $users = \App\User::where("username", "LIKE","%$keyword%")
-                    ->orWhere("firstname", "LIKE", "%$keyword%")
-                    ->orWhere("lastname", "LIKE", "%$keyword%")
-                    ->orWhere("email", "LIKE", "%$keyword%")
-                    ->orWhere("phone", "LIKE", "%$keyword%")->get();
-
-            return view('pages.results', compact('users'));
-            
-//            if ($request->wantsJson()) {return $users;}
-//            return view("pages.users", compact('users'));
+            if($keyword !== ''){
+                $users = \App\User::where("username", "LIKE","%$keyword%")
+                        ->orWhere("firstname", "LIKE", "%$keyword%")
+                        ->orWhere("lastname", "LIKE", "%$keyword%")
+                        ->orWhere("email", "LIKE", "%$keyword%")
+                        ->orWhere("phone", "LIKE", "%$keyword%")->get();
+                
+                    return view('pages.results', array( 'users' => $users ));
+                    
+            } elseif(empty($users) || $keyword == "") {
+                
+                    return view('pages.results');
+            }
         }
 
 }

@@ -14,7 +14,6 @@
 Route::get('', 'UsersController@index');
 Route::get('home', 'UsersController@index');
 Route::resource('users', 'UsersController');
-//Route::get('users', 'UsersController@search');
 
 Route::get('results', 'SearchesController@search');
 
