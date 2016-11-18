@@ -22,7 +22,7 @@
         </tr>
         @endforeach
     @else
-    <td class="text-center"><b>No results found, please try again.</b><br /><a href="{{ url('users') }}"><b>Display All</b></a></td>
+    <td class="text-center"><b>No results found, please try again.</b><br /><a href="{{ url('index') }}"><b>Display All</b></a></td>
     @endif
 </table>
 

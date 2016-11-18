@@ -13,7 +13,7 @@
 
 Route::get('', 'UsersController@index');
 Route::get('home', 'UsersController@index');
-Route::resource('users', 'UsersController');
+Route::resource('index', 'UsersController');
 
 Route::get('results', 'SearchesController@search');
 

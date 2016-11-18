@@ -3,10 +3,10 @@
 @section('content')
 <div class="table-control">
     <h1>Create new user</h1>
-    <a href="{{ url('users') }}">Back to Users</a>
+    <a href="{{ url('index') }}">Back to Users</a>
     <hr>
     
-    {!! Form::open(['url'=>'users']) !!}
+    {!! Form::open(['url'=>'index']) !!}
     
        @include('pages.form', ['submitButtonText'=>'Add User'])
     

@@ -17,7 +17,7 @@ class UsersController extends Controller {
 	{
 	    
             $users = \App\User::all();
-            return view('pages.users', compact('users'));
+            return view('pages.index', compact('users'));
             
 	}
 
@@ -43,7 +43,7 @@ class UsersController extends Controller {
                 
                 User::create($input);
                 
-                return redirect('users')->with([
+                return redirect('index')->with([
                     'flash_message' => 'The user has been created.',
                     'flash_message_important' => 'true',
                 ]);
@@ -86,7 +86,7 @@ class UsersController extends Controller {
             
             $user->update($input);
             
-            return redirect('users')->with([
+            return redirect('index')->with([
                 'flash_message' => 'The user has been updated.',
                 'flash_message_important' => 'true',
             ]);
@@ -103,7 +103,7 @@ class UsersController extends Controller {
             $user = User::findOrFail($id);
             $user->delete();
             
-            return redirect('users')->with([
+            return redirect('index')->with([
                 'flash_message' => 'The user has been deleted.',
                 'flash_message_important' => 'true',
             ]);
