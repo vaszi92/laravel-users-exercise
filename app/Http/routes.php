@@ -15,8 +15,6 @@ Route::get('', 'UsersController@index');
 Route::get('home', 'UsersController@index');
 Route::resource('index', 'UsersController');
 
-Route::get('results', 'SearchesController@search');
-
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
