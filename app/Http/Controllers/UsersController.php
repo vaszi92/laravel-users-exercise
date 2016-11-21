@@ -103,10 +103,10 @@ class UsersController extends Controller {
             $user = User::findOrFail($id);
             $user->delete();
             
-            return redirect('index')->with([
-                'flash_message' => 'The user has been deleted.',
-                'flash_message_important' => 'true',
-            ]);
+//            return view('pages.index')->with([
+//                'flash_message' => 'The user has been deleted.',
+//                'flash_message_important' => 'true',
+//            ]);
 	}
 
 }

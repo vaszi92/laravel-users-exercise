@@ -1,5 +1,6 @@
 $('document').ready(function(){
-    
+
+//      AJAX search on Results page
 //    $('.searchbar').keypress(function (e) {
 //        if (e.which == 13) {
 //    
@@ -17,7 +18,8 @@ $('document').ready(function(){
 //            
 //        }
 //    });
-    
+
+    //  Real time search
         var $rows = $('#userinfo tr');
         $('.searchbar').keyup(function() {
 
@@ -30,6 +32,28 @@ $('document').ready(function(){
                 return !reg.test(text);
             }).hide();
         });
+        
+    //  Delete user and remove it from list
+
+        $('.btn-delete').click(function(){
+            
+            var id = $(this).val();
+            var token = $(this).data('token');
+            
+            $.ajax({
+                type: 'POST',
+                url: '/laravel-exercise/public/index/'+id,
+                data: {_method: 'delete', _token :token},
+                success: function (data) {
+                    console.log('Success:', data);
+                    $('#'+id).remove();
+                },
+                error: function (data) {
+                    console.log('Error:', data);
+                }
+            });
+        });
+        
 });
     
 

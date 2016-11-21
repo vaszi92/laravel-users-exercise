@@ -15,6 +15,8 @@ Route::get('', 'UsersController@index');
 Route::get('home', 'UsersController@index');
 Route::resource('index', 'UsersController');
 
+Route::post('index/{id}', 'UsersController@destroy');
+
 Route::controllers([
 	'auth' => 'Auth\AuthController',
 	'password' => 'Auth\PasswordController',
