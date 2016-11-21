@@ -47,6 +47,8 @@ $('document').ready(function(){
                 success: function (data) {
                     console.log('Success:', data);
                     $('#'+id).remove();
+                    $( "body" ).prepend( "<div class=\"alert alert-success\"><button type=\"button\" class=\"close\" data-dismiss=\"alert\" aria-hidden=\"true\">&times;</button>The user has been deleted.</div>" );
+
                 },
                 error: function (data) {
                     console.log('Error:', data);
